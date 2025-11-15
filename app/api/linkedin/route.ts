@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export async function GET(request: Request) {
   try {
     // Since LinkedIn API is restricted, we'll fetch from a public profile endpoint

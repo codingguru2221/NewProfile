@@ -6,6 +6,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // GitHub Pages configuration
+  basePath: '',
+  assetPrefix: '',
+  // Output HTML files for static hosting
+  output: 'export',
 }
 
 export default nextConfig
