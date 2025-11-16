@@ -1,15 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Fix Turbopack root warning
+  experimental: {
+    turbopack: {
+      root: '.',
+    },
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
   },
-  // GitHub Pages configuration
-  // Replace 'your-repo-name' with your actual GitHub repository name
-  basePath: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '',
-  assetPrefix: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '',
+  // GitHub Pages configuration for NewProfile repository
+  basePath: '/NewProfile',
+  assetPrefix: '/NewProfile',
   // Output HTML files for static hosting
   output: 'export',
 }
